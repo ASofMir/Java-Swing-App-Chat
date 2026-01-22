@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.mycompany.java.swing.na">
+  <ClassDiagramComponents>
+    <Class name="ChatServer" package="com.mycompany.java.swing.na" visibility="public" xPosition="83.0" yPosition="144.0">
+      <Fields>
+        <Field name="PORT" type="int" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="clients" type="CopyOnWriteArrayList&lt;ClientHandler&gt;" visibility="private" isStatic="true"/>
+        <Field name="serverLog" type="StringBuilder" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="broadcast" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="message"/>
+          <Argument type="ClientHandler" name="sender"/>
+        </Method>
+        <Method name="saveLogFile" returnType="void" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="NewJFrame" package="com.mycompany.java.swing.na" visibility="public" xPosition="492.0" yPosition="20.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextPane1" type="javax.swing.JTextPane" visibility="private"/>
+        <Field name="socket" type="Socket" visibility="private"/>
+        <Field name="in" type="DataInputStream" visibility="private"/>
+        <Field name="out" type="DataOutputStream" visibility="private"/>
+        <Field name="conversationLog" type="StringBuilder" visibility="private"/>
+        <Field name="userName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="connectToServer" returnType="void" visibility="private"/>
+        <Method name="sendMessage" returnType="void" visibility="private"/>
+        <Method name="receiveMessage" returnType="void" visibility="private">
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="appendToPane" returnType="void" visibility="private">
+          <Argument type="String" name="msg"/>
+          <Argument type="Color" name="c"/>
+        </Method>
+        <Method name="closeConnection" returnType="void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="saveLogFile" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
